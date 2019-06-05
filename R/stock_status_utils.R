@@ -5,14 +5,12 @@
 #' @param x A timeseries of data
 #' @param n The number of observations to average. Default is 5 period moving average.
 #' @keywords simple moving average
-#' @examples
-#' sma(c(1:100))
-
 sma <- function(x,n=5) {
   j <- n-1
   NAs <- rep(NA,j)
   return( c(NAs,sapply(1:(length(x)-j), function(X) sum(x[X:(X+j)])/n)) )
 }
+
 
 #' Landings SMA
 #' This function is an adjusted SMA with the ends filled.
@@ -20,9 +18,6 @@ sma <- function(x,n=5) {
 #' @param x A timeseries of data
 #' @param n The number of observations to average. Default is 5 period moving average.
 #' @keywords simple moving average
-#' @examples
-#' sma(c(1:100))
-
 landings_sma <- function(x,n=5) {
   l <- length(x)
   if(l>10) {
