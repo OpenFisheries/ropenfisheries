@@ -6,6 +6,9 @@ Date: 2014-11-11
 Author: Andrew J. Dyck
 Maintainer: Andrew J. Dyck <info@andrewdyck.com>
 Description: An R package for global fisheries research and analysis.
-License: BSD
-Imports:
-    
+Encoding: UTF-8
+LazyData: true
+Imports: httr, jsonlite, plyr, rfisheries
+RoxygenNote: 6.1.1
+Suggests: testthat
+License: MIT + file LICENSE
