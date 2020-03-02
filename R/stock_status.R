@@ -9,8 +9,8 @@ stock_status <- function(data, n=5) {
   if(l < 10) {
     results <- list( 
       status=data.frame(
-        year <-c(1950:2011), 
-        catch <- data,
+        year = c(1950:2015), 
+        catch = data,
         stock_status=rep(NA, l),
         normalized=rep(NA, l),
         lost_catch=rep(NA, l),
@@ -27,8 +27,8 @@ stock_status <- function(data, n=5) {
     if(peakPos == l) {
       results <- list(
         status=data.frame(
-          year <-c(1950:2011), 
-          catch <- data,
+          year = c(1950:2015), 
+          catch = data,
           stock_status=rep("developing",l),
           normalized=rep(NA, l),
           lost_catch=rep(NA, l),
@@ -41,8 +41,8 @@ stock_status <- function(data, n=5) {
     if(l-peakPos < 10) {
       results <- list(
         status=data.frame(
-          year <-c(1950:2011), 
-          catch <- data,
+          year = c(1950:2015), 
+          catch = data,
           stock_status=rep(NA, l),
           normalized=rep(NA, l),
           lost_catch=rep(NA, l),
@@ -81,7 +81,7 @@ stock_status <- function(data, n=5) {
       
       results <- list(
         status=data.frame(
-          year = c(1950:2011), 
+          year = c(1950:2015), 
           catch = data,
           stock_status=stock_status,
           normalized=pct_of_max,
