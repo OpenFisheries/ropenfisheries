@@ -24,7 +24,8 @@ stock_status <- function(data, n=5) {
     mx <- max(smoothed,na.rm=TRUE)
     peakBoolean <- smoothed==mx
     peakPos <- length(peakBoolean[1:which(peakBoolean==TRUE)])
-    if(peakPos == l) {
+    print(peakPos)
+    if (peakPos == l) {
       results <- list(
         status=data.frame(
           year = c(1950:2015), 
@@ -37,8 +38,7 @@ stock_status <- function(data, n=5) {
           max_catch=NA
         )
       )
-    }
-    if(l-peakPos < 10) {
+    } else if (l-peakPos < 10) {
       results <- list(
         status=data.frame(
           year = c(1950:2015), 
