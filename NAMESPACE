@@ -2,4 +2,6 @@
 
 export(estimate_lost_catch)
 export(estimate_msy)
+export(finalise_plot)
+export(odsk_style)
 export(stock_status)

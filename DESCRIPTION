@@ -9,6 +9,6 @@ Description: An R package for global fisheries research and analysis.
 Encoding: UTF-8
 LazyData: true
 Imports: httr, jsonlite, plyr, rfisheries
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
 Suggests: testthat
 License: MIT + file LICENSE
